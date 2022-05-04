@@ -1,13 +1,15 @@
 
 :root {
     --base: #0075ff;
+    --size: 800px;
     --spacing: 10px;
     --blur: 0px;
   }
 
   img {
-    width: 800px;
-    height: 500px;
+    /* width: 800px; */
+    /* height: 500px; */
+    width: var(--size);
     padding: var(--spacing);
     background: var(--base);
     filter: blur(var(--blur));
