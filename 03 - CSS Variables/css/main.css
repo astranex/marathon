@@ -4,6 +4,7 @@
     --size: 800px;
     --spacing: 10px;
     --blur: 0px;
+    --grayscale: 0%;
   }
 
   img {
@@ -12,7 +13,7 @@
     width: var(--size);
     padding: var(--spacing);
     background: var(--base);
-    filter: blur(var(--blur));
+    filter: blur(var(--blur)) grayscale(var(--grayscale));
   }
 
   .hl {
@@ -32,8 +33,9 @@
 
   .controls {
     margin-bottom: 50px;
+    font-size: 36px;
   }
 
   input {
-    width: 100px;
+    width: 80px;
   }
