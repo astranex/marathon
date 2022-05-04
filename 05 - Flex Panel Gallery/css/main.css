@@ -1,0 +1,131 @@
+
+html {
+   box-sizing: border-box;
+   background: #000;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 20px;
+   font-weight: 500;
+ }
+ 
+ body {
+   margin: 0;
+ }
+ 
+ *, *:before, *:after {
+   box-sizing: inherit;
+ }
+
+ .panels {
+   min-height: 100vh;
+   overflow: hidden;
+   display: flex;
+ }
+
+ .panel {
+   background: #6B0F9C;
+   box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+   color: #fff;
+   text-align: center;
+   align-items: center;
+
+   /* Safari transitionend event.propertyName === flex */
+   /* Chrome + FF transitionend event.propertyName === flex-grow */
+   
+   transition:
+     font-size 0.5s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+     flex 0.5s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+     background 0.2s;
+   font-size: 20px;
+   background-size: cover;
+   background-position: center;
+   flex: 1;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+ }
+
+ .overlay {
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.75);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+ }
+
+ .panel1 { background-image:url(https://www.tonybela.com/Star%20Wars%20Phantom%20Menace%20artwork.jpg); }
+ .panel2 { background-image:url(https://images.hdqwalls.com/download/star-wars-episode-ii-attack-of-the-clones-natalie-portman-4k-q2-1440x2560.jpg); }
+ .panel3 { background-image:url(https://i.pinimg.com/originals/a8/ea/9f/a8ea9fe5978419c5923f7eebae1c40f8.jpg); }
+ .panel4 { background-image:url(https://picfiles.alphacoders.com/125/125156.jpg); }
+ .panel5 { background-image:url(https://pbs.twimg.com/media/EYi3JmnVcAAShwa.jpg); }
+ .panel6 { background-image:url(https://pbs.twimg.com/media/D2llI6tXQAE6wN3.jpg); }
+ .panel7 { background-image:url(http://image.tmdb.org/t/p/original/fo0NuouBrxiI1YQ2bkeASlbptIs.jpg); }
+ .panel8 { background-image:url(https://bestwallpapers.in/wp-content/uploads/2018/05/star-wars-the-last-jedi-movie-poster-8k-wallpaper-3415x3415.jpg); }
+ .panel9 { background-image:url(https://i.redd.it/o5rxoybsp3x31.jpg); }
+
+ /* Flex Childrens */
+
+ .panel > * {
+   margin: 0;
+   width: 100%;
+   transition: transform 0.5s;
+   flex: 1 0 auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   transition: .2s all ease-in-out;
+ }
+
+ .panel p:first-child {
+   transform: translateY(0);
+ }
+
+ .panel p:last-child {
+   transform: translateY(0);
+ }
+
+ .panel.open-active p:first-child {
+   transform: translateY(-280px);
+ }
+
+ .panel.open-active p:last-child {
+   transform: translateY(340px);
+ }
+
+ .panel p {
+   text-transform: uppercase;
+   font-family: 'Montserrat', sans-serif;
+   width: 100%;
+   text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+   font-size: 1.5em;
+   padding-top: 10px;
+   padding-bottom: 15px;
+   transition: .2s all ease-in-out;
+ }
+
+ .panel:hover .overlay {
+   background: none;
+ }
+ 
+ .panel:hover p {
+   background: rgba(0, 0, 0, 0.25);
+ }
+
+ .panel p:nth-child(2) {
+   font-size: 4em;
+ }
+
+ .panel.open {
+   flex: 5;
+ }
+
+ .panel.open p {
+   background: rgba(0, 0, 0, 0.45);
+ }
+
+ .panel.open .overlay {
+   background: none;
+ }

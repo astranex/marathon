@@ -112,7 +112,7 @@ console.log(fullNames)
      obj[item] = 0
    }
    obj[item]++
-   return obj
+   return obj 
  }, {})
 
  console.log(transportation)
