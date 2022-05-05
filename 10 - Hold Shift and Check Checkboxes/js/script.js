@@ -8,14 +8,14 @@ function handleCheck(e) {
    let inBetween = false
    if (e.shiftKey && this.checked) {
       checkboxes.forEach(checkbox => {
-         console.log(checkbox)
+         // console.log(checkbox)
          if (checkbox === this || checkbox === lastChecked) { 
-            inBetween = !inBetween // Выделяем всё, что между первым и последним чекбоксом
+            inBetween = !inBetween // Меняем inBetween. Выделяем всё, что между первым и последним чекбоксом
             console.log('IN BETWEEN')
          } 
 
-         if (inBetween) {
-            checkbox.checked = true // Отмечаем все чекбоксы, которые внутри выделения
+         if (inBetween) { // Пока inBetween = true, отмечаем итерируемые чекбоксы
+            checkbox.checked = true
          }
       })
    }
