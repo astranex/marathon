@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+  <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script> <!-- up up down down left rigth left rigth b a ;) --> 
+</head>
+<body>
+<script>
+  
+  const pressed = []
+  const secretCode = 'aboba'
+
+  window.addEventListener('keyup', (e) => {
+    // console.log(e.key)
+    pressed.push(e.key) // Пушим клавишу
+
+    pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length) // Удаляем всё вплоть до длины секретного слова
+
+    if (pressed.join('').includes(secretCode)) { // Если секретное слово найдено, срабатывает скрипт
+      console.log('SECRET CODE!')
+      cornify_add() // Запускаем функцию из библиотеки
+    } 
+
+    console.log(pressed)
+  })
+
+</script>
+</body>
+</html>
