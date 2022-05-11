@@ -1,0 +1,24 @@
+
+html {
+   color: #fff;
+   background-color: #111;
+   font-family: 'Montserrat', sans-serif;
+ }
+
+ body {
+   margin: 0;
+ }
+
+ .hero {
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+ }
+
+ h1 {
+   text-shadow: 5px 5px 0 rgba(224, 3, 72, 0.7), -5px -5px 0 rgba(0, 223, 209, 0.7);
+   font-size: 100px;
+   transition: .1s all;
+ }
