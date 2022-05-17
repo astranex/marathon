@@ -1,0 +1,63 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  color: #111;
+  margin: 0; /* Important! */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  background: url(https://phonoteka.org/uploads/posts/2021-04/1619565689_20-phonoteka_org-p-fon-dlya-knizhnoi-vistavki-v-biblioteke-25.jpg) no-repeat center top / cover;
+}
+
+.wrapper {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  margin: 0 auto;
+  max-width: 700px;
+  font-size: 20px;
+  line-height: 2;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(9, 57, 128);
+  background: rgba(0,0,0,0.05);
+  padding: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.highlight {
+  transition: all 0.2s;
+  border-bottom: 2px solid white;
+  position: absolute;
+  top: 0;
+  background: white;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+  display: block;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.menu {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin:100px 0;
+}
+
+.menu a {
+  display: inline-block;
+  padding: 5px;
+  margin: 0 20px;
+  color: black;
+}
