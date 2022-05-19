@@ -1,0 +1,90 @@
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  background: #8E24AA;
+  /* background: linear-gradient(45deg,  #42a5f5 0%,#478ed1 50%,#0d47a1 100%); */
+  background: url(https://catherineasquithgallery.com/uploads/posts/2021-02/1614430864_43-p-krasivii-fon-dlya-teksta-temnii-50.jpg) no-repeat center top / cover;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Koulen', sans-serif;
+  font-weight: 500;
+}
+
+.display__time-left {
+  font-weight: 500;
+  font-size: 20rem;
+  margin: 0;
+  color: white;
+  text-shadow: 4px 4px 0 rgba(255, 255, 255, 0.05);
+}
+
+.timer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.timer__controls {
+  display: flex;
+}
+
+.timer__controls > * {
+  flex: 1;
+}
+
+.timer__controls form {
+  flex: 1;
+  display: flex;
+}
+
+.timer__controls input {
+  flex: 1;
+  border: 0;
+  padding: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.timer__button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background: rgba(90, 90, 90, 0.1);
+  border-bottom: 3px solid rgba(90, 90, 90, 0.15);
+  border-right: 1px solid rgba(90, 90, 90, 0.15);
+  padding: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  transition: .2s all;
+}
+
+.timer__button:hover,
+.timer__button:focus {
+  background: rgba(0,0,0,0.2);
+  outline: 0;
+}
+
+.display {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.display__end-time {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 2.8rem;
+  color: white;
+}
